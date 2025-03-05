@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'my-app'               // Docker image name
-        DOCKER_TAG = 'version-1'              // Docker tag
+        DOCKER_TAG = 'version-1.10'              // Docker tag
         DOCKER_HUB_REPO = 'royjith/cube'     // Docker Hub repository
         DOCKER_HUB_CREDENTIALS_ID = 'dockerhub' // Docker Hub credentials ID
         KUBE_CONFIG = '/tmp/kubeconfig'       // Path to kubeconfig file
@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code from Git...'
-                git branch: 'main', url: 'https://github.com/Royjith/nginx-image.git'
+                git branch: 'main', url: 'https://github.com/Royjith/nginix-alpha.git'
             }
         }
 
